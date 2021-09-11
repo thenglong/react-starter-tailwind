@@ -3,7 +3,7 @@ function App() {
   return (
     <div className="text-red-600">
       <div>
-        <Card className="flex block" />
+        <Card />
       </div>
     </div>
   );
