@@ -1,0 +1,74 @@
+env:
+  browser: true
+  node: true
+  es2021: true
+extends:
+  - plugin:react/recommended
+  - plugin:prettier/recommended
+  - plugin:jsx-a11y/recommended
+  - plugin:react-hooks/recommended
+  - plugin:import/recommended
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 12
+  sourceType: module
+plugins:
+  - react
+  - react-hooks
+  - jsx-a11y
+  - import
+settings:
+  react:
+    version: detect
+rules:
+  prettier/prettier:
+    - error
+    - endOfLine: auto
+  react/react-in-jsx-scope: off
+  no-console: warn
+  no-unused-vars:
+    - 1
+    - args: after-used
+      argsIgnorePattern: "^_"
+      varsIgnorePattern: "^_"
+  no-unreachable: error
+  no-undef: error
+  react-hooks/rules-of-hooks: error
+  react-hooks/exhaustive-deps: warn
+  react/jsx-sort-props:
+    - error
+    - callbacksLast: true
+      shorthandFirst: true
+      shorthandLast: true
+      ignoreCase: true
+      noSortAlphabetically: true
+      reservedFirst: true
+  react/jsx-curly-brace-presence:
+    - error
+    - props: never
+      children: ignore
+  react/prop-types: off
+  import/no-unresolved: [2, { commonjs: true, amd: true }]
+  import/named: 2
+  import/namespace: 2
+  import/default: 2
+  import/export: 2
+  import/order:
+    - error
+    - groups:
+        - builtin
+        - external
+        - internal
+        - - parent
+          - sibling
+      pathGroups:
+        - pattern: react
+          group: external
+          position: before
+      pathGroupsExcludedImportTypes:
+        - react
+      newlines-between: always
+      alphabetize:
+        order: asc
+        caseInsensitive: true
