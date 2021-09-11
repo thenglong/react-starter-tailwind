@@ -1,6 +1,7 @@
 {
   "name": "pg-react-tailwind",
   "version": "0.1.0",
+  "homepage": "https://thenglong.github.io/react-starter-tailwind",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.3.0",
